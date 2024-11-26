@@ -9,39 +9,42 @@
   <style>
     .circle-button {
       all: unset;
-      width: 100px;
-      height: 100px;
+      width: 250px;
+      height: 250px;
       background-color: #00000050;
       border-radius: 50%;
       margin: 100px;
       position: relative;
+      padding: 2rem;
     }
 
-    .circle-svg {
+    svg {
       position: absolute;
-      inset: -10px;
+      inset: -30px;
     }
+    
   </style>
 </head>
 
 <body>
 
-  <button class="circle-button">
+<button class="circle-button">
 
-    <svg class="circle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-      <path id="circlePath"
-        d="M20 10C20 15.5228 15.5228 20 10 20C4.47716 20 0 15.5228 0 10C0 4.47716 4.47716 0 10 0C15.5228 0 20 4.47716 20 10ZM0.327577 10C0.327577 15.3419 4.65807 19.6724 10 19.6724C15.3419 19.6724 19.6724 15.3419 19.6724 10C19.6724 4.65807 15.3419 0.327577 10 0.327577C4.65807 0.327577 0.327577 4.65807 0.327577 10Z"
-        fill="black" />
+  
+  <svg viewBox="0 0 400 400">
+    <defs>
+      <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path"></path>
+    </defs>
+    
+    <text fill="red" font-size="32">
+      <textPath startOffset="0" href="#txt-path">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores velit est voluptate! est voluptate!
+      </textPath>
+    </text>
+  </svg>
 
-        <text fill="black" font-size="1">
-          <textPath href="#circlePath" text-anchor="middle" startOffset="50%">
-            The text wraps around
-          </textPath>
-        </text>
 
-    </svg>
-
-  </button>
+</button>
 
 </body>
 
